@@ -1,0 +1,51 @@
+{
+  "name": "@quantum/cli",
+  "version": "0.0.1",
+  "description": "CLI tool for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "create-quantum-app": "./bin/create-quantum-app.js",
+    "quantum": "./bin/quantum.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "bin",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "prompts": "^2.4.2",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "fs-extra": "^11.2.0",
+    "execa": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.5",
+    "@types/prompts": "^2.4.9",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "keywords": [
+    "quantum",
+    "framework",
+    "cli",
+    "create-app"
+  ],
+  "author": "Haider Ali Khan",
+  "license": "MIT"
+}

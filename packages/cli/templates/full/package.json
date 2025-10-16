@@ -1,0 +1,19 @@
+{
+  "name": "quantum-app",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@quantum/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@quantum/compiler": "workspace:*",
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}
