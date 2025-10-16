@@ -28,6 +28,8 @@ Quantum is a modern JavaScript framework that combines the best ideas from React
 - **🛠️ Complete Tooling** - CLI for scaffolding, dev server, and production builds
 - **📦 Batteries Included** - Client-side router, state management (coming soon), and more
 
+**[See detailed competitive analysis →](./docs/COMPETITIVE_ADVANTAGE.md)**
+
 ---
 
 ## ✨ Features
@@ -369,6 +371,7 @@ function LoginForm() {
 - [Architecture Overview](./docs/ARCHITECTURE.md) - Deep dive into framework design
 - [Development Roadmap](./docs/ROADMAP.md) - 20-week implementation plan
 - [Progress Tracking](./docs/PROGRESS.md) - Current development status
+- [Competitive Advantage](./docs/COMPETITIVE_ADVANTAGE.md) - Why Quantum is different
 
 ---
 
