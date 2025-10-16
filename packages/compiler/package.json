@@ -1,0 +1,53 @@
+{
+  "name": "@quantum/compiler",
+  "version": "0.0.1",
+  "description": "JSX/TSX compiler and optimizer for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./vite": {
+      "types": "./dist/vite-plugin.d.ts",
+      "import": "./dist/vite-plugin.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "quantum",
+    "compiler",
+    "jsx",
+    "tsx",
+    "transformer"
+  ],
+  "author": "Quantum Framework Team",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.23.6",
+    "@babel/traverse": "^7.23.6",
+    "@babel/types": "^7.23.6",
+    "@babel/generator": "^7.23.6",
+    "magic-string": "^0.30.5"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__traverse": "^7.20.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "vitest": "^1.1.0"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@quantum/renderer",
+  "version": "0.0.1",
+  "description": "DOM rendering engine for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "quantum",
+    "renderer",
+    "dom"
+  ],
+  "author": "Quantum Framework Team",
+  "license": "MIT",
+  "dependencies": {
+    "@quantum/reactivity": "workspace:*",
+    "@quantum/component": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0",
+    "jsdom": "^23.0.0"
+  }
+}

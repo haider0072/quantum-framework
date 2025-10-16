@@ -1,0 +1,38 @@
+{
+  "name": "@quantum/reactivity",
+  "version": "0.0.1",
+  "description": "Fine-grained reactive primitives for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "quantum",
+    "reactivity",
+    "signals",
+    "reactive",
+    "state"
+  ],
+  "author": "Quantum Framework Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}

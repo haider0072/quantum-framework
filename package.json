@@ -1,0 +1,47 @@
+{
+  "name": "quantum-framework",
+  "version": "0.0.1",
+  "description": "The ultimate multi-platform framework - high performance, lightweight, and complete",
+  "private": true,
+  "workspaces": [
+    "core/*",
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter @quantum/dev-server dev",
+    "build": "pnpm -r build",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "framework",
+    "react",
+    "vue",
+    "multi-platform",
+    "mobile",
+    "web",
+    "typescript",
+    "performance",
+    "lightweight"
+  ],
+  "author": "Quantum Framework Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "quantum-hello-world",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@quantum/reactivity": "workspace:*",
+    "@quantum/component": "workspace:*",
+    "@quantum/renderer": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  }
+}
