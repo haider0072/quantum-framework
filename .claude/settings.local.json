@@ -6,7 +6,17 @@
       "Bash(pnpm install:*)",
       "Bash(pnpm dev)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Quantum Framework v0.0.1 (Week 1-3 implementation)\n\nImplemented core framework with reactivity, components, renderer, and compiler.\n\nFeatures:\n- Core reactivity system (signals, computed, effects, batching)\n- Component model with JSX/TSX runtime\n- DOM renderer with efficient updates\n- JSX/TSX compiler with Babel-based parsing\n- Vite plugin for seamless integration\n- Comprehensive test suite (74 tests passing)\n- Working hello-world example application\n\nTechnical achievements:\n- Bundle size: 2.7KB gzipped (exceeds <5KB target)\n- Signal-based reactivity (no VDOM)\n- Full TypeScript support\n- Auto-import JSX runtime\n- Static/dynamic node detection\n- Source map support\n\nProject structure:\n- core/reactivity: Signal-based reactivity (46 tests)\n- core/component: Component model & JSX runtime\n- core/renderer: DOM rendering engine\n- packages/compiler: JSX/TSX compiler (28 tests)\n- examples/hello-world: Working demo app\n- docs: Architecture, roadmap, and progress documentation\n\nStatus: Alpha v0.0.1 - Foundation + Compiler complete (Week 1-3)\nNext: CLI tooling and build optimizations (Week 4)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git remote add:*)",
+      "Bash(git restore:*)",
+      "Bash(git push:*)",
+      "Bash(git log:*)",
+      "Bash(git commit --amend -m \"$(cat <<''EOF''\nInitial commit: Quantum Framework v0.0.1 (Week 1-3 implementation)\n\nImplemented core framework with reactivity, components, renderer, and compiler.\n\nFeatures:\n- Core reactivity system (signals, computed, effects, batching)\n- Component model with JSX/TSX runtime\n- DOM renderer with efficient updates\n- JSX/TSX compiler with Babel-based parsing\n- Vite plugin for seamless integration\n- Comprehensive test suite (74 tests passing)\n- Working hello-world example application\n\nTechnical achievements:\n- Bundle size: 2.7KB gzipped (exceeds <5KB target)\n- Signal-based reactivity (no VDOM)\n- Full TypeScript support\n- Auto-import JSX runtime\n- Static/dynamic node detection\n- Source map support\n\nProject structure:\n- core/reactivity: Signal-based reactivity (46 tests)\n- core/component: Component model & JSX runtime\n- core/renderer: DOM rendering engine\n- packages/compiler: JSX/TSX compiler (28 tests)\n- examples/hello-world: Working demo app\n- docs: Architecture, roadmap, and progress documentation\n\nStatus: Alpha v0.0.1 - Foundation + Compiler complete (Week 1-3)\nNext: CLI tooling and build optimizations (Week 4)\nEOF\n)\")",
+      "Bash(git commit:*)",
+      "Bash(pnpm build:*)",
+      "Bash(cat:*)",
+      "Bash(pkill:*)"
     ],
     "deny": [],
     "ask": []

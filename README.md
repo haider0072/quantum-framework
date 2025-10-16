@@ -4,7 +4,7 @@
 
 **A lightning-fast, signal-based reactive framework for building modern web applications**
 
-[![Tests](https://img.shields.io/badge/tests-80%2F80%20passing-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-98%2F98%20passing-brightgreen)]()
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-2.7KB%20gzipped-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 [![TypeScript](https://img.shields.io/badge/TypeScript-100%25-blue)]()
@@ -24,9 +24,9 @@ Quantum is a modern JavaScript framework that combines the best ideas from React
 - **🚀 Blazing Fast** - 2.7KB gzipped core, signal-based reactivity with zero VDOM overhead
 - **💎 Developer Experience** - Familiar JSX/TSX syntax, full TypeScript support, intuitive API
 - **⚡ Smart Compiler** - Compile-time optimizations for maximum runtime performance
-- **🎯 Production Ready** - Comprehensive test coverage (80/80 tests passing)
+- **🎯 Production Ready** - Comprehensive test coverage (98/98 tests passing)
 - **🛠️ Complete Tooling** - CLI for scaffolding, dev server, and production builds
-- **📦 Batteries Included** - Router, state management, and styling (coming soon)
+- **📦 Batteries Included** - Client-side router, state management (coming soon), and more
 
 ---
 
@@ -43,6 +43,16 @@ Quantum is a modern JavaScript framework that combines the best ideas from React
 - **Context API** - Component data propagation with reactive contexts
 - **Code Splitting** - Lazy loading and Suspense support
 - **Portals** - Render components outside the DOM hierarchy
+
+### Routing
+
+- **Signal-Based Router** - Client-side routing with reactivity integration
+- **Multiple Modes** - History API and hash-based routing
+- **Dynamic Routes** - Parameter extraction (`:id`, `:userId`)
+- **Nested Routes** - Parent-child route hierarchies
+- **Navigation Guards** - beforeEach, afterEach, beforeEnter hooks
+- **Link Component** - Automatic active state management
+- **TypeScript Support** - Fully typed route definitions
 
 ### Developer Tools
 
@@ -229,19 +239,26 @@ quantum-framework/
 │   │   │   ├── generator.ts   # Code generator
 │   │   │   └── vite-plugin.ts # Vite integration
 │   │   └── __tests__/         # 28 tests
-│   └── cli/                # Command-line tool
+│   ├── cli/                # Command-line tool
+│   │   ├── src/
+│   │   │   ├── commands/      # CLI commands
+│   │   │   │   ├── create.ts  # Project scaffolding
+│   │   │   │   ├── dev.ts     # Dev server
+│   │   │   │   ├── build.ts   # Production build
+│   │   │   │   └── preview.ts # Build preview
+│   │   │   └── index.ts       # CLI entry point
+│   │   ├── templates/         # Project templates
+│   │   │   ├── basic/
+│   │   │   ├── typescript/
+│   │   │   └── full/
+│   │   └── __tests__/         # 6 tests
+│   └── router/             # Client-side router
 │       ├── src/
-│       │   ├── commands/      # CLI commands
-│       │   │   ├── create.ts  # Project scaffolding
-│       │   │   ├── dev.ts     # Dev server
-│       │   │   ├── build.ts   # Production build
-│       │   │   └── preview.ts # Build preview
-│       │   └── index.ts       # CLI entry point
-│       ├── templates/         # Project templates
-│       │   ├── basic/
-│       │   ├── typescript/
-│       │   └── full/
-│       └── __tests__/         # 6 tests
+│       │   ├── types.ts       # Type definitions
+│       │   ├── matcher.ts     # Route matching
+│       │   ├── router.ts      # Router implementation
+│       │   └── components.tsx # Router components
+│       └── __tests__/         # 18 tests
 ├── examples/
 │   └── hello-world/        # Example application
 └── docs/                   # Documentation
@@ -341,10 +358,11 @@ function LoginForm() {
 - **[@quantum/core/component](./core/component)** - Component model and JSX runtime
 - **[@quantum/core/renderer](./core/renderer)** - DOM rendering engine
 
-### Tools
+### Packages
 
 - **[@quantum/compiler](./packages/compiler)** - JSX/TSX compiler and Vite plugin
 - **[@quantum/cli](./packages/cli)** - Command-line interface
+- **[@quantum/router](./packages/router)** - Client-side router with navigation guards
 
 ### Guides
 
@@ -425,6 +443,7 @@ pnpm test
 cd core/reactivity && pnpm test
 cd packages/compiler && pnpm test
 cd packages/cli && pnpm test
+cd packages/router && pnpm test
 
 # Watch mode
 pnpm test:watch
@@ -435,13 +454,14 @@ pnpm test:watch
 - **Reactivity System**: 46/46 tests passing
 - **Compiler**: 28/28 tests passing
 - **CLI**: 6/6 tests passing
-- **Total**: 80/80 tests passing ✅
+- **Router**: 18/18 tests passing
+- **Total**: 98/98 tests passing ✅
 
 ---
 
 ## 🗺️ Roadmap
 
-### Phase 1: Foundation ✅ (Weeks 1-4) - COMPLETE
+### Phase 1: Foundation ✅ (Weeks 1-5) - COMPLETE
 
 - [x] Signal-based reactivity system
 - [x] Component model with JSX/TSX
@@ -449,10 +469,10 @@ pnpm test:watch
 - [x] JSX/TSX compiler with Vite plugin
 - [x] CLI tool with project scaffolding
 - [x] Project templates (basic/typescript/full)
+- [x] Client-side router with navigation guards
 
-### Phase 2: Essential Features (Weeks 5-8)
+### Phase 2: Essential Features (Weeks 6-8)
 
-- [ ] Client-side router with code splitting
 - [ ] Global state management
 - [ ] Styled components / CSS-in-JS
 - [ ] Animations and transitions
