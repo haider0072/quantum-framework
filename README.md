@@ -368,6 +368,7 @@ function LoginForm() {
 
 ### Guides
 
+- [**Beginner's Guide**](./docs/BEGINNER_FRIENDLY.md) - New to frameworks? Start here!
 - [Architecture Overview](./docs/ARCHITECTURE.md) - Deep dive into framework design
 - [Development Roadmap](./docs/ROADMAP.md) - 20-week implementation plan
 - [Progress Tracking](./docs/PROGRESS.md) - Current development status
