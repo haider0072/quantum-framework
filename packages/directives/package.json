@@ -1,0 +1,42 @@
+{
+  "name": "@quantum/directives",
+  "version": "0.0.1",
+  "description": "Directives and transitions for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@quantum/reactivity": "workspace:*",
+    "@quantum/component": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "jsdom": "^24.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "keywords": [
+    "quantum",
+    "directives",
+    "transitions",
+    "animations",
+    "v-if",
+    "v-for",
+    "v-show"
+  ],
+  "author": "Haider Ali Khan",
+  "license": "MIT"
+}
