@@ -6,14 +6,14 @@
 
 import { signal, computed } from '@quantum/reactivity';
 
-export function App() {
-  // Create reactive state
-  const count = signal(0);
-  const doubled = computed(() => count() * 2);
+// Create reactive state outside component (global)
+const count = signal(0);
+const doubled = computed(() => count() * 2);
 
+export function App() {
   // Event handlers
-  const increment = () => count.update((n) => n + 1);
-  const decrement = () => count.update((n) => n - 1);
+  const increment = () => count(count() + 1);
+  const decrement = () => count(count() - 1);
   const reset = () => count(0);
 
   return (
@@ -28,11 +28,11 @@ export function App() {
         <h2 style="margin: 0 0 20px 0; color: #0f172a;">Interactive Counter</h2>
 
         <div style="font-size: 48px; font-weight: bold; color: #6366f1; margin: 20px 0;">
-          {count()}
+          {count}
         </div>
 
         <div style="font-size: 20px; color: #64748b; margin: 10px 0;">
-          Doubled: {doubled()}
+          Doubled: {doubled}
         </div>
 
         <div style="margin-top: 30px; display: flex; gap: 10px; justify-content: center;">

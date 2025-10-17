@@ -4,9 +4,9 @@
  * Public API for rendering Quantum applications to the DOM.
  */
 
-import { effect, batch } from '@quantum/reactivity';
 import type { QuantumNode } from '@quantum/component';
 import { createNode, removeNode } from './dom';
+import { effect } from '@quantum/reactivity';
 
 interface RenderRoot {
   container: Element;
@@ -35,23 +35,19 @@ export function render(app: QuantumNode, container: Element): () => void {
     existingRoot.dispose();
   }
 
-  let currentNode: Node | null = null;
+  // Create and mount node (fine-grained reactivity handled in createNode)
+  const currentNode = createNode(app);
+  if (currentNode) {
+    container.appendChild(currentNode);
+  }
 
-  // Create reactive render effect
-  const dispose = effect(() => {
-    batch(() => {
-      // Remove old node
-      if (currentNode) {
-        removeNode(currentNode);
-      }
-
-      // Create and mount new node
-      currentNode = createNode(app);
-      if (currentNode) {
-        container.appendChild(currentNode);
-      }
-    });
-  });
+  // Cleanup function
+  const dispose = () => {
+    if (currentNode) {
+      removeNode(currentNode);
+    }
+    roots.delete(container);
+  };
 
   // Store root
   const root: RenderRoot = {

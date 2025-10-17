@@ -7,6 +7,7 @@
 
 import type { QuantumElement, QuantumNode } from '@quantum/component';
 import { isElement, isFragment, renderComponent } from '@quantum/component';
+import { effect } from '@quantum/reactivity';
 
 /**
  * Creates a DOM element from a Quantum element.
@@ -75,6 +76,19 @@ export function createNode(node: QuantumNode): Node | null {
   // Handle text nodes
   if (typeof node === 'string' || typeof node === 'number') {
     return document.createTextNode(String(node));
+  }
+
+  // Handle signals (functions with peek method = reactive values)
+  if (typeof node === 'function') {
+    // Check if it's a signal/computed
+    if ('peek' in node) {
+      // Create a text node that reactively updates
+      const textNode = document.createTextNode('');
+      effect(() => {
+        textNode.textContent = String((node as any)());
+      });
+      return textNode;
+    }
   }
 
   // Handle arrays
