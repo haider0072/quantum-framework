@@ -1,0 +1,46 @@
+{
+  "name": "@quantum/ssr",
+  "version": "0.0.1",
+  "description": "Server-side rendering for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@quantum/reactivity": "workspace:*",
+    "@quantum/component": "workspace:*",
+    "@quantum/renderer": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0",
+    "jsdom": "^23.2.0"
+  },
+  "keywords": [
+    "quantum",
+    "ssr",
+    "server-side-rendering",
+    "hydration",
+    "ssg",
+    "static-site-generation"
+  ],
+  "author": "Haider Ali Khan",
+  "license": "MIT"
+}

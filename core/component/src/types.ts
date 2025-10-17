@@ -34,3 +34,7 @@ export interface QuantumElement {
 }
 
 export type QuantumFragment = { children: QuantumNode[] };
+
+// Alias for convenience and SSR compatibility
+export type Component = QuantumNode;
+export type ComponentElement = QuantumElement;

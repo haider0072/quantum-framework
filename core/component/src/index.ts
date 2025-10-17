@@ -56,6 +56,8 @@ export type {
   FunctionComponent,
   QuantumElement,
   QuantumNode,
+  Component,
+  ComponentElement,
   Key,
   Ref,
 } from './types';
