@@ -1,0 +1,40 @@
+{
+  "name": "@quantum/styled",
+  "version": "0.0.1",
+  "description": "CSS-in-JS styling solution for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@quantum/reactivity": "workspace:*",
+    "@quantum/component": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "jsdom": "^24.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "keywords": [
+    "quantum",
+    "styled",
+    "css-in-js",
+    "styling",
+    "theme"
+  ],
+  "author": "Haider Ali Khan",
+  "license": "MIT"
+}

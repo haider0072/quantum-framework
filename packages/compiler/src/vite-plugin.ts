@@ -6,7 +6,7 @@
  */
 
 import type { Plugin } from 'vite';
-import { compile, type CompileOptions } from './index';
+import { compile, type CompileOptions } from './index.js';
 
 export interface QuantumPluginOptions {
   /**
@@ -50,7 +50,7 @@ export function quantumPlugin(options: QuantumPluginOptions = {}): Plugin {
     name: 'vite-plugin-quantum',
 
     // Set development mode based on Vite command
-    config(config, { command }) {
+    config(_config, { command }) {
       isDev = command === 'serve';
     },
 

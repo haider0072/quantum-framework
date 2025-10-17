@@ -5,9 +5,9 @@
  * transformation, and code generation.
  */
 
-import { parseCode, shouldTransform, getFileMode, type ParseOptions } from './parser';
-import { transformAST, type TransformOptions, type TransformMetadata } from './transformer';
-import { generateCode, type GenerateOptions } from './generator';
+import { parseCode, shouldTransform, getFileMode, type ParseOptions } from './parser.js';
+import { transformAST, type TransformOptions, type TransformMetadata } from './transformer.js';
+import { generateCode, type GenerateOptions } from './generator.js';
 
 export interface CompileOptions {
   filename?: string;
@@ -87,4 +87,4 @@ export function compile(code: string, options: CompileOptions = {}): CompileResu
 // Re-export types and utilities
 export { parseCode, transformAST, generateCode };
 export type { ParseOptions, TransformOptions, GenerateOptions, TransformMetadata };
-export { shouldTransform, getFileMode } from './parser';
+export { shouldTransform, getFileMode } from './parser.js';

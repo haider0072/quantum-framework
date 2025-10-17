@@ -1,0 +1,38 @@
+{
+  "name": "@quantum/store",
+  "version": "0.1.0",
+  "description": "Signal-based global state management for Quantum Framework",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "quantum",
+    "state-management",
+    "store",
+    "signals",
+    "reactive"
+  ],
+  "author": "Haider Ali Khan",
+  "license": "MIT",
+  "dependencies": {
+    "@quantum/reactivity": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}
