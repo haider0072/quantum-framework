@@ -4,7 +4,7 @@
 
 **A lightning-fast, signal-based reactive framework for building modern web applications**
 
-[![Tests](https://img.shields.io/badge/tests-98%2F98%20passing-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-220%2F220%20passing-brightgreen)]()
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-2.7KB%20gzipped-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 [![TypeScript](https://img.shields.io/badge/TypeScript-100%25-blue)]()
@@ -24,9 +24,9 @@ Quantum is a modern JavaScript framework that combines the best ideas from React
 - **🚀 Blazing Fast** - 2.7KB gzipped core, signal-based reactivity with zero VDOM overhead
 - **💎 Developer Experience** - Familiar JSX/TSX syntax, full TypeScript support, intuitive API
 - **⚡ Smart Compiler** - Compile-time optimizations for maximum runtime performance
-- **🎯 Production Ready** - Comprehensive test coverage (98/98 tests passing)
+- **🎯 Production Ready** - Comprehensive test coverage (220/220 tests passing)
 - **🛠️ Complete Tooling** - CLI for scaffolding, dev server, and production builds
-- **📦 Batteries Included** - Client-side router, state management (coming soon), and more
+- **📦 Batteries Included** - Client-side router, state management, CSS-in-JS styling, and more
 
 **[See detailed competitive analysis →](./docs/COMPETITIVE_ADVANTAGE.md)**
 
@@ -55,6 +55,24 @@ Quantum is a modern JavaScript framework that combines the best ideas from React
 - **Navigation Guards** - beforeEach, afterEach, beforeEnter hooks
 - **Link Component** - Automatic active state management
 - **TypeScript Support** - Fully typed route definitions
+
+### State Management
+
+- **Redux-Style Stores** - Familiar patterns with signals under the hood
+- **Actions & Getters** - Type-safe state mutations and computed values
+- **Middleware System** - Logger, thunk, devtools, and custom middleware
+- **Persistence** - LocalStorage/SessionStorage with selective syncing
+- **DevTools** - Redux DevTools Extension integration
+- **Time Travel** - Debug with action replay and state snapshots
+
+### Styling
+
+- **CSS-in-JS** - Near-zero runtime CSS generation with hash-based classes
+- **Styled Components** - Component factories for all HTML elements
+- **Theme System** - Signal-based reactive theming with TypeScript
+- **CSS Utilities** - Keyframes, animations, media queries, pseudo-classes
+- **Global Styles** - CSS reset and global styling support
+- **SSR Ready** - Style extraction for server-side rendering
 
 ### Developer Tools
 
@@ -254,15 +272,30 @@ quantum-framework/
 │   │   │   ├── typescript/
 │   │   │   └── full/
 │   │   └── __tests__/         # 6 tests
-│   └── router/             # Client-side router
+│   ├── router/             # Client-side router
+│   │   ├── src/
+│   │   │   ├── types.ts       # Type definitions
+│   │   │   ├── matcher.ts     # Route matching
+│   │   │   ├── router.ts      # Router implementation
+│   │   │   └── components.tsx # Router components
+│   │   └── __tests__/         # 18 tests
+│   ├── store/              # State management
+│   │   ├── src/
+│   │   │   ├── store.ts       # Core store
+│   │   │   ├── middleware.ts  # Middleware system
+│   │   │   ├── persistence.ts # Storage persistence
+│   │   │   └── devtools.ts    # DevTools integration
+│   │   └── __tests__/         # 53 tests
+│   └── styled/             # CSS-in-JS styling
 │       ├── src/
-│       │   ├── types.ts       # Type definitions
-│       │   ├── matcher.ts     # Route matching
-│       │   ├── router.ts      # Router implementation
-│       │   └── components.tsx # Router components
-│       └── __tests__/         # 18 tests
+│       │   ├── core/          # CSS engine
+│       │   ├── styled/        # Styled components
+│       │   ├── theme/         # Theme system
+│       │   └── utilities/     # CSS helpers
+│       └── __tests__/         # 69 tests
 ├── examples/
-│   └── hello-world/        # Example application
+│   ├── hello-world/        # Basic example
+│   └── styled-demo/        # Styling example
 └── docs/                   # Documentation
     ├── ARCHITECTURE.md     # Technical architecture
     ├── ROADMAP.md          # Implementation roadmap
@@ -365,6 +398,8 @@ function LoginForm() {
 - **[@quantum/compiler](./packages/compiler)** - JSX/TSX compiler and Vite plugin
 - **[@quantum/cli](./packages/cli)** - Command-line interface
 - **[@quantum/router](./packages/router)** - Client-side router with navigation guards
+- **[@quantum/store](./packages/store)** - Redux-style state management with signals
+- **[@quantum/styled](./packages/styled)** - CSS-in-JS styling with theme support
 
 ### Guides
 
@@ -459,13 +494,15 @@ pnpm test:watch
 - **Compiler**: 28/28 tests passing
 - **CLI**: 6/6 tests passing
 - **Router**: 18/18 tests passing
-- **Total**: 98/98 tests passing ✅
+- **Store**: 53/53 tests passing
+- **Styled**: 69/69 tests passing
+- **Total**: 220/220 tests passing ✅
 
 ---
 
 ## 🗺️ Roadmap
 
-### Phase 1: Foundation ✅ (Weeks 1-5) - COMPLETE
+### Phase 1: Foundation ✅ (Weeks 1-7) - COMPLETE
 
 - [x] Signal-based reactivity system
 - [x] Component model with JSX/TSX
@@ -474,12 +511,14 @@ pnpm test:watch
 - [x] CLI tool with project scaffolding
 - [x] Project templates (basic/typescript/full)
 - [x] Client-side router with navigation guards
+- [x] Redux-style state management with middleware
+- [x] CSS-in-JS styling with theme system
 
-### Phase 2: Essential Features (Weeks 6-8)
+### Phase 2: Essential Features (Weeks 8-10)
 
-- [ ] Global state management
-- [ ] Styled components / CSS-in-JS
 - [ ] Animations and transitions
+- [ ] Directives system
+- [ ] Advanced SSR features
 
 ### Phase 3: Advanced Features (Weeks 9-12)
 
